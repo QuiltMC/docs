@@ -14,6 +14,7 @@ export default defineConfig({
 				{ icon: "github", label: "GitHub", href: "https://github.com/quiltmc/" },
 				{icon: "discord", label: "Discord", href: "https://discord.quiltmc.org"}
 		 ],
+		 editLink: { baseUrl: "https://github.com/QuiltMC/docs/edit/main/" },
 			sidebar: [
 				{
 					label: "For Users",
