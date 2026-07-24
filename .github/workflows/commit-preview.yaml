@@ -1,0 +1,7 @@
+on: push
+name: Build and Send to Cloudflare
+
+jobs:
+  build-and-publish:
+    uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@actions-upgrade
+    secrets: inherit
