@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "Quilt Documentation",
+			favicon: "src/assets/favicon.ico",
 			customCss: [
 				"./src/styles/theme.css"
 			],
