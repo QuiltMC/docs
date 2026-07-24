@@ -11,19 +11,25 @@ export default defineConfig({
 			customCss: [
 				"./src/styles/theme.css"
 			],
+			defaultLocale: "en",
+			locales: {
+				en: {
+					label: "English"
+				}
+			},
 			social: [
 				{ icon: "github", label: "GitHub", href: "https://github.com/quiltmc/" },
 				{icon: "discord", label: "Discord", href: "https://discord.quiltmc.org"}
 		 ],
-		 editLink: { baseUrl: "https://github.com/QuiltMC/docs/edit/main/" },
+			editLink: { baseUrl: "https://github.com/QuiltMC/docs/edit/main/" },
 			sidebar: [
 				{
 					label: "For Users",
-					autogenerate: {"directory": "user"}
+					items: [{autogenerate: {"directory": "user"}}]
 				},
 				{
 					label: "For Mod Developers",
-					autogenerate: { directory: "developer" },
+					items: [{autogenerate: { directory: "developer" }}]
 				},
 			],
 		}),
