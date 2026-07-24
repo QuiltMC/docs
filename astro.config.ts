@@ -29,7 +29,13 @@ export default defineConfig({
 				},
 				{
 					label: "For Mod Developers",
-					items: [{autogenerate: { directory: "developer" }}]
+					items: [
+						{
+							label: "Quilt Config",
+							items: [{autogenerate: {"directory": "developer/quilt-config"}}]
+							
+						}
+					]
 				},
 			],
 		}),
