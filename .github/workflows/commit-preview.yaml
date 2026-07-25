@@ -2,6 +2,12 @@ on: push
 name: Build and Send to Cloudflare
 
 jobs:
-  build-and-publish:
-    uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@actions-upgrade
+  build-website:
+    uses: quiltmc/quiltmc.org/.github/workflows/build-website.yaml@actions-upgrade
+
+  publish:
+    uses: quiltmc/quiltmc.org/.github/workflows/publish-website.yaml@actions-upgrade
+    needs: build-website
     secrets: inherit
+    with:
+      deploy: ${{ github.ref_name == 'main' }}
