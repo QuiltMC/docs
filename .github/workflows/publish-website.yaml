@@ -40,6 +40,14 @@ jobs:
       GITHUB_RUN_ID: ${{ inputs.run-id }}
       GITHUB_TOKEN: ${{ secrets.COZY_PAT }}
     steps:
+      - name: Initial Validation
+        run: |
+          echo "Token length: ${#TOKEN}"
+          curl -s \
+          -H "Authorization: Bearer $TOKEN" \
+          https://api.github.com/user | jq '.login'
+        env:
+          TOKEN: ${{ secrets.COZY_PAT }}  
       - name: Validate Cozy PAT access
         env:
           GH_TOKEN: ${{ secrets.COZY_PAT }}
@@ -49,14 +57,6 @@ jobs:
           gh api \
             repos/${{ github.repository }}/actions/runs/${{ inputs.run-id }}/artifacts \
             --jq .total_count    
-      - name: Initial Validation
-        run: |
-         echo "Token length: ${#TOKEN}"
-         curl -s \
-           -H "Authorization: Bearer $TOKEN" \
-           https://api.github.com/user | jq '.login'
-        env:
-         TOKEN: ${{ secrets.COZY_PAT }}  
       - name: Download Website HTML
         uses: actions/download-artifact@v8
         with:
