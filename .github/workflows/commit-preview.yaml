@@ -8,4 +8,5 @@ jobs:
     secrets: inherit
     permissions:
       contents: write
+      actions: read
       deployments: write
