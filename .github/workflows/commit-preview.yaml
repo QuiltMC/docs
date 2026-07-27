@@ -7,6 +7,5 @@ jobs:
     uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@actions-upgrade
     secrets: inherit
     permissions:
-      contents: read
-      actions: write
+      contents: write
       deployments: write
