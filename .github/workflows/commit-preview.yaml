@@ -1,13 +1,11 @@
-on: [push, workflow_call]
+on: [push]
 name: Commit preview
 
 jobs:
-  build-website:
-    uses: ./.github/workflows/build-website.yaml
-
-  publish:
-    uses: ./.github/workflows/publish-website.yaml
-    needs: build-website
+  build-and-publish:
+    name: Build and publish to Cloudflare
+    uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@actions-upgrade
     secrets: inherit
-    with:
-      deploy: ${{ github.ref_name == 'main' }}
+    permissions:
+      contents: read
+      actions: read
