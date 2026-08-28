@@ -2,6 +2,8 @@ on:
 pull_request_target:
   types: [opened]
 
+name: Add PR Preview footer
+
 jobs:
   add-comment-footer:
     uses: quiltmc/quiltmc.org/.github/workflows/pr-preview-footer.yaml@actions-upgrade
