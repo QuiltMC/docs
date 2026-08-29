@@ -5,7 +5,7 @@ name: Manual Publish
 jobs:
   manual-publish:
     name: Manual Publish
-    uses: quiltmc/quiltmc.org/.github/workflows/manual-publish.yaml
+    uses: quiltmc/quiltmc.org/.github/workflows/manual-publish.yaml@actions-upgrade
     permissions:
       actions: read
       contents: read
