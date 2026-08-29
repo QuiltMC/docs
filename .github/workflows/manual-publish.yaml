@@ -1,0 +1,12 @@
+on: workflow_dispatch
+
+name: Manual Publish
+
+jobs:
+  manual-publish:
+    name: Manual Publish
+    uses: quiltmc/quiltmc.org/.github/workflows/manual-publish.yaml
+    permissions:
+      actions: read
+      contents: read
+    secrets: inherit
