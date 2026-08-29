@@ -6,7 +6,7 @@ name: Add PR Preview footer
 
 jobs:
   add-comment-footer:
-    uses: quiltmc/quiltmc.org/.github/workflows/pr-preview-footer.yaml@actions-upgrade
+    uses: quiltmc/quiltmc.org/.github/workflows/pr-preview-footer.yaml@main
     with:
       preview-domain: docs.quiltmc.workers.dev
     secrets: inherit

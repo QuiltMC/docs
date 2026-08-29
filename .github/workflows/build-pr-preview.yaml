@@ -4,7 +4,7 @@ name: Build PR preview
 jobs:
   build-pr-preview:
     name: Build and publish PR Preview
-    uses: quiltmc/quiltmc.org/.github/workflows/build-pr-preview.yaml@actions-upgrade
+    uses: quiltmc/quiltmc.org/.github/workflows/build-pr-preview.yaml@main
     with:
       pr-number: ${{ github.event.number }}
     secrets: inherit

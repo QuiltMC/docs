@@ -4,7 +4,7 @@ name: Commit preview
 jobs:
   build-and-publish:
     name: Build and publish to Cloudflare
-    uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@actions-upgrade
+    uses: quiltmc/quiltmc.org/.github/workflows/commit-preview.yaml@main
     with:
       preview-domain: docs.quiltmc.workers.dev
     secrets: inherit
