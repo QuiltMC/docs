@@ -1,8 +1,8 @@
 on: [pull_request]
-name: Build and publish PR preview
+name: Build PR preview
 
 jobs:
-  build-and-publish:
+  build-pr-preview:
     name: Build and publish PR Preview
     uses: quiltmc/quiltmc.org/.github/workflows/build-pr-preview.yaml@actions-upgrade
     with:
@@ -11,3 +11,4 @@ jobs:
     permissions:
       actions: read
       contents: read
+      deployments: write
