@@ -1,7 +1,7 @@
 on:
-workflow_run:
-  workflows: ["Build PR preview"]
-  types: [completed]
+  workflow_run:
+    workflows: ["Build PR preview"]
+    types: [completed]
 
 jobs:
   publish-pr-preview:
