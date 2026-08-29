@@ -1,0 +1,12 @@
+on:
+workflow_run:
+  workflows: ["Build PR preview"]
+  types: [completed]
+
+jobs:
+  publish-pr-preview:
+    uses: quiltmc/quiltmc.org/.github/workflows/publish-pr-preview.yaml 
+    permissions:
+      actions: read
+      contents: read
+    secrets: inherit
